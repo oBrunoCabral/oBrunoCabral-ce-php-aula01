@@ -13,14 +13,13 @@
 			text-align: center;
 		}
 	</style>
-	
 
 </head>
 <body>
 
 	<?php 
-		$a = 1; 
-		$b = 1;
+		$a = $_REQUEST['a']; 
+		$b = $_REQUEST['b'];
 
 		$soma = $a+$b;
 		$subtrai = $a-$b;
@@ -39,7 +38,7 @@
 	</form>
 	
 
-	<table>
+	<table class="table">
 		<thead>
 			<th>Operação</th>
 			<th>Resultado</th>
@@ -47,23 +46,23 @@
 		<tbody>
 		<tr>	
 			<td>A+B</td>
-			<td><?php echo 10 + 20 ?></td>
+			<td><?php echo $soma ?></td>
 		</tr>
 		<tr>	
 			<td>A-B</td>
-			<td><?php echo 10 - 20 ?></td>
+			<td><?php echo $subtrai ?></td>
 		</tr>
 		<tr>	
 			<td>AXB</td>
-			<td><?php echo 10 * 20 ?></td>
+			<td><?php echo $multpl ?></td>
 		</tr>
 		<tr>	
 			<td>A/B</td>
-			<td><?php echo 10 / 20 ?></td>
+			<td><?php echo $divd ?></td>
 		</tr>		
 		<tr>	
 			<td>B<sup>A</sup></td>
-			<td><?php echo number_format(pow(20, 10), 0,'.', '.') ?></td>
+			<td><?php echo number_format($expon, 0,'.', '.') ?></td>
 		</tr>
 
 
